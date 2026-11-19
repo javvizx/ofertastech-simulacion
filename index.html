@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OfertasTech Express - ¡¡¡LIQUIDASION TOTAL 90% OFF!!!</title>
+    <style>
+        /* Reseteo y Estilos Generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+
+        /* Banner Educativo Superior (Seguridad Académica) */
+        .edu-banner {
+            background-color: #0f172a;
+            color: #f8fafc;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            border-bottom: 3px solid #38bdf8;
+        }
+
+        /* Barra de Urgencia Parpadeante */
+        .urgency-bar {
+            background-color: #dc2626;
+            color: #ffffff;
+            text-align: center;
+            padding: 12px;
+            font-weight: 800;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            animation: pulseBg 1.5s infinite;
+        }
+
+        @keyframes pulseBg {
+            0% { background-color: #dc2626; }
+            50% { background-color: #991b1b; }
+            100% { background-color: #dc2626; }
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #facc15;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 4px solid #dc2626;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #b91c1c;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 0px #ffffff;
+        }
+
+        .nav-fake a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #111827;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        /* Hero Engañoso */
+        .hero-scam {
+            background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 3rem 1.5rem;
+        }
+
+        .hero-scam h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .hero-scam p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .countdown-box {
+            display: inline-block;
+            background-color: #000000;
+            color: #facc15;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            border: 2px dashed #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        /* Notificación Falsa de Compras en Vivo */
+        .fake-live-alert {
+            background-color: #fef08a;
+            border: 2px solid #eab308;
+            color: #854d0e;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* Catálogo Sospechoso */
+        .grid-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .badge-discount {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: #dc2626;
+            color: #ffffff;
+            font-weight: 900;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .product-icon {
+            font-size: 3.5rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .stock-warning {
+            color: #dc2626;
+            font-weight: 800;
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .price-box {
+            margin-bottom: 1rem;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #94a3b8;
+            font-size: 1rem;
+            margin-right: 8px;
+        }
+
+        .new-price {
+            color: #16a34a;
+            font-size: 1.6rem;
+            font-weight: 900;
+        }
+
+        .btn-buy {
+            background-color: #16a34a;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 800;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .btn-buy:hover {
+            background-color: #15803d;
+        }
+
+        /* Sección de Contacto y Privacidad Deficiente */
+        .suspect-footer-info {
+            background-color: #e2e8f0;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .suspect-footer-info h4 {
+            color: #b91c1c;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Guía Educativa de Señales de Alerta (Red Flags) */
+        .analysis-section {
+            background-color: #ffffff;
+            border: 3px solid #0284c7;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-top: 3.5rem;
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.1);
+        }
+
+        .analysis-section h2 {
+            color: #0369a1;
+            margin-bottom: 1rem;
+            font-size: 1.7rem;
+            border-bottom: 2px solid #bae6fd;
+            padding-bottom: 0.5rem;
+        }
+
+        .red-flag-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .red-flag-list li {
+            background-color: #f0f9ff;
+            border-left: 5px solid #0284c7;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .red-flag-list strong {
+            color: #0f172a;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.05rem;
+        }
+
+        /* Modal Educativo al hacer clic en Comprar */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: #ffffff;
+            max-width: 500px;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border-top: 6px solid #0284c7;
+        }
+
+        .modal-content h3 {
+            color: #0369a1;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content p {
+            margin-bottom: 1.5rem;
+            color: #334155;
+        }
+
+        .btn-close {
+            background-color: #0284c7;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .hero-scam h1 { font-size: 1.7rem; }
+            header { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Aviso Académico -->
+    <div class="edu-banner">
+        🎓 <strong>SIMULACIÓN EDUCATIVA DE CIBERSEGURIDAD:</strong> Esta página es un entorno controlado para identificar señales de fraude web. No realiza ventas reales ni solicita datos personales o financieros.
+    </div>
+
+    <!-- Urgencia Extrema -->
+    <div class="urgency-bar">
+        🚨 ¡¡¡ALERTA DE ÚLTIMO MINUTO!!! TODO AL 90% DE DESCUENTO SOLO POR HOY - ¡NO DEJES PASAR ESTA OPORTUNIDAD UNICA! 🚨
+    </div>
+
+    <!-- Encabezado con Errores -->
+    <header>
+        <div class="logo">⚡ OfertasTech Express</div>
+        <nav class="nav-fake">
+            <a href="#ofertas">Ofertas Relampago</a>
+            <a href="#contacto-dudoso">Atension al Cliente</a>
+            <a href="#analisis-fraude" style="color: #0369a1;">[Ver Análisis de Fraude]</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal Engañoso -->
+    <section class="hero-scam">
+        <h1>¡LIQUIDASION TOTAL DE BODEGA POR CIERRE!</h1>
+        <p>¡Felisidades! Has sido selecionado como visitante ganador para acceder a precios de fabrica con el 90% de rebaja en toda la tienda. ¡Compra lla antes de que se agote el inventario!</p>
+        <div class="countdown-box">
+            La oferta termina en: <span id="timer">04:59</span>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <main class="container" id="ofertas">
+        
+        <!-- Mensaje Publicitario Engañoso -->
+        <div class="fake-live-alert" id="liveAlert">
+            🔥 ¡¡148 personas estan viendo esta oferta ahora mismo!! ¡Quedan menos de 2 unidades en existencia!
+        </div>
+
+        <!-- Catálogo con Descuentos Irreales y Errores Ortográficos -->
+        <div class="grid-products">
+            
+            <!-- Producto 1 -->
+            <article class="card">
+                <span class="badge-discount">-90% OFF</span>
+                <div class="product-icon">💻</div>
+                <h3>Laptop Gamer Ultra Pro 32GB RAM</h3>
+                <p>Computadora portatil de ultima jeneracion con tarjeta grafica dedicada y disco solido de 2TB. Envío gratis a todo el mundo sin impuestos.</p>
+                <div class="stock-warning">⚠️ ¡SOLO QUEDA 1 UNIDAD DISPONIBLE!</div>
+                <div class="price-box">
+                    <span class="old-price">$1,500.00</span>
+                    <span class="new-price">$150.00</span>
+                </div>
+                <button class="btn-buy" onclick="mostrarAlertaEducativa('Laptop Gamer Ultra Pro')">¡COMPRAR LLA!</button>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="card">
+                <span class="badge-discount">-90% OFF</span>
+                <div class="product-icon">📱</div>
+                <h3>Smartphone Titan Max 5G 1TB</h3>
+                <p>Telefono intelijente desbloqueado de fabrica, camara profecional de 200MP y bateria de larga duracion. Garantia total.</p>
+                <div class="stock-warning">⚠️ ¡OFERTA EXPIRA EN SEGUNDOS!</div>
+                <div class="price-box">
+                    <span class="old-price">$1,200.00</span>
+                    <span class="new-price">$120.00</span>
+                </div>
+                <button class="btn-buy" onclick="mostrarAlertaEducativa('Smartphone Titan Max')">¡RECLAMAR OFERTA!</button>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="card">
+                <span class="badge-discount">-90% OFF</span>
+                <div class="product-icon">🎧</div>
+                <h3>Audifonos Inalambricos Studio Pro</h3>
+                <p>Cancelasion de ruido activa, sonido envolvente HD y estuche de carga rapida. Calidad garantisada al mejor presio.</p>
+                <div class="stock-warning">⚠️ ¡ÚLTIMAS PIEZAS EN BODEGA!</div>
+                <div class="price-box">
+                    <span class="old-price">$300.00</span>
+                    <span class="new-price">$30.00</span>
+                </div>
+                <button class="btn-buy" onclick="mostrarAlertaEducativa('Audifonos Studio Pro')">¡COMPRAR AHORA!</button>
+            </article>
+
+        </div>
+
+        <!-- Información Comercial No Verificable, Contacto Poco Claro y Privacidad Incompleta -->
+        <section class="suspect-footer-info" id="contacto-dudoso">
+            <div>
+                <h4>Sobre Nosotros (Sin datos legales)</h4>
+                <p>Somos una empresa lider mundial en tecnologia. No contamos con tienda fisica por el momento debido a remodelacion. Ventas unicamente por este medio.</p>
+                <p><em>Registro comercial: En tramite...</em></p>
+            </div>
+
+            <div>
+                <h4>Contacto</h4>
+                <p>Si tienes dudas escribenos a nuestro correo gratuito:</p>
+                <p><strong>ventas.ofertastech99@gmail-ejemplo.com</strong></p>
+                <p>Teléfono: No disponible temporalmente (solo mensajes).</p>
+                <p>Dirección: Zona Industrial, Bodega Sin Número.</p>
+            </div>
+
+            <div>
+                <h4>Politicas de Privacidad y Devoluciones</h4>
+                <p>Al navegar aqui aceptas nuestras condiciones. Tus datos podran ser usados para enviarte promociones de nuestros socios comerciales. No se aceptan devoluciones ni reembolsos bajo ninguna sircunstancia. Texto en construccion...</p>
+            </div>
+        </section>
+
+        <!-- Explicación Académica de las Señales de Fraude -->
+        <section class="analysis-section" id="analisis-fraude">
+            <h2>🔍 Guía Educativa: Señales de Alerta (Red Flags) Identificadas en este Sitio</h2>
+            <p>Esta simulación fue diseñada para demostrar los patrones habituales que utilizan los sitios de comercio electrónico fraudulentos para engañar a los usuarios:</p>
+
+            <ul class="red-flag-list">
+                <li>
+                    <strong>1. Descuentos exagerados e irreales (90% de rebaja):</strong>
+                    Ofrecer equipos tecnológicos de gama alta a una décima parte de su valor real de mercado ($150 por una laptop de $1,500) es el principal gancho para nublar el juicio crítico del comprador.
+                </li>
+                <li>
+                    <strong>2. Falsa urgencia y escasez artificial:</strong>
+                    El uso de temporizadores en cuenta regresiva, barras parpadeantes y avisos como <em>"Solo queda 1 unidad"</em> o <em>"148 personas viendo esto"</em> buscan presionar al usuario para que actúe impulsivamente sin verificar la legitimidad del sitio.
+                </li>
+                <li>
+                    <strong>3. Errores ortográficos y gramaticales evidentes:</strong>
+                    Palabras mal escritas como <em>"liquidasion", "felisidades", "selecionado", "lla", "jeneracion", "atension"</em> o <em>"sircunstancia"</em> reflejan falta de profesionalismo y suelen indicar sitios creados de forma apresurada o automatizada.
+                </li>
+                <li>
+                    <strong>4. Ausencia de información comercial verificable:</strong>
+                    No existe razón social, número de identificación fiscal (RUC/NIT), dirección física comprobable ni enlaces reales a redes sociales o respaldos legales.
+                </li>
+                <li>
+                    <strong>5. Información de contacto poco clara o genérica:</strong>
+                    Carece de líneas telefónicas verificables o formularios formales, y recurre a supuestos correos gratuitos en lugar de un dominio corporativo propio.
+                </li>
+                <li>
+                    <strong>6. Políticas de privacidad y devoluciones incompletas:</strong>
+                    El apartado legal es ambiguo, está "en construcción", no explica quién es el responsable del tratamiento de datos ni cómo ejercer derechos sobre ellos, e incluye cláusulas abusivas como prohibir cualquier reembolso.
+                </li>
+                <li>
+                    <strong>7. Mensajes publicitarios engañosos:</strong>
+                    Afirmaciones como <em>"Has sido seleccionado como visitante ganador"</em> o <em>"Envío gratis a todo el mundo sin impuestos"</em> son tácticas típicas de ingeniería social para generar una falsa sensación de privilegio.
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Ventana Modal Educativa (Evita cualquier captura de datos) -->
+    <div class="modal" id="eduModal">
+        <div class="modal-content">
+            <h3>🛡️ ¡Detente! Simulación de Prevención</h3>
+            <p id="modalText">En un sitio real con estas características, al hacer clic en comprar te pedirían datos de tarjeta de crédito o transferencias irreversibles sin entregarte ningún producto.</p>
+            <p><strong>Nota educativa:</strong> Esta simulación no solicita contraseñas, datos personales ni información financiera.</p>
+            <button class="btn-close" onclick="cerrarModal()">Entendido, revisar señales de alerta</button>
+        </div>
+    </div>
+
+    <script>
+        // Temporizador de falsa urgencia (reinicia automáticamente)
+        let timeLeft = 299; // 4 minutos y 59 segundos
+        const timerElement = document.getElementById('timer');
+
+        setInterval(() => {
+            if (timeLeft <= 0) {
+                timeLeft = 299; // Reinicio infinito típico de páginas engañosas
+            }
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            timeLeft--;
+        }, 1000);
+
+        // Rotación de mensajes publicitarios engañosos
+        const fakeMessages = [
+            "🔥 ¡¡148 personas estan viendo esta oferta ahora mismo!! ¡Quedan menos de 2 unidades!",
+            "⚡ ¡Carlos M. acaba de comprar Laptop Gamer Ultra Pro hace 12 segundos!",
+            "🚨 ¡ATENCION! El precio subira en pocos minutos. ¡Aprovecha el 90% OFF lla!"
+        ];
+        let msgIndex = 0;
+        const liveAlert = document.getElementById('liveAlert');
+
+        setInterval(() => {
+            msgIndex = (msgIndex + 1) % fakeMessages.length;
+            liveAlert.textContent = fakeMessages[msgIndex];
+        }, 4000);
+
+        // Interacción segura del botón de compra
+        function mostrarAlertaEducativa(producto) {
+            const modal = document.getElementById('eduModal');
+            const modalText = document.getElementById('modalText');
+            modalText.innerHTML = `Intentaste comprar <strong>${producto}</strong> con un supuesto 90% de descuento. En un sitio fraudulento real, aquí es donde robarían tu dinero o tus datos personales.`;
+            modal.style.display = 'flex';
+        }
+
+        function cerrarModal() {
+            document.getElementById('eduModal').style.display = 'none';
+            document.getElementById('analisis-fraude').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
